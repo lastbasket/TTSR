@@ -1,11 +1,11 @@
 ### training TTSR
-python main.py --save_dir ./train/CUFED/TTSR \
+python3 main.py --save_dir ./train \
                --reset True \
                --log_file_name train.log \
                --num_gpu 1 \
                --num_workers 9 \
                --dataset CUFED \
-               --dataset_dir /home/v-fuyang/Data/CUFED/ \
+               --dataset_dir data/CUFED \
                --n_feats 64 \
                --lr_rate 1e-4 \
                --lr_rate_dis 1e-4 \
@@ -16,10 +16,10 @@ python main.py --save_dir ./train/CUFED/TTSR \
                --adv_w 1e-3 \
                --batch_size 9 \
                --num_init_epochs 2 \
-               --num_epochs 50 \
-               --print_every 600 \
-               --save_every 10 \
-               --val_every 10
+               --num_epochs 10000 \
+               --print_every 1000 \
+               --save_every 1000 \
+               --val_every 500
 
 
 # ### training TTSR-rec

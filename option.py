@@ -95,6 +95,8 @@ parser.add_argument('--save_every', type=int, default=999999,
                     help='Save period')
 parser.add_argument('--val_every', type=int, default=999999,
                     help='Validation period')
+parser.add_argument('--checkpoint', type=str, default='./TTSR.pt',
+                    help='Checkpoint')
 
 ### evaluate / test / finetune setting
 parser.add_argument('--eval', type=str2bool, default=False,

@@ -30,6 +30,10 @@ if __name__ == '__main__':
 
     ### trainer
     t = Trainer(args, _logger, _dataloader, _model, _loss_all)
+    
+    ### load checkpoint
+    if args.checkpoint:
+        t.load(model_path=args.checkpoint)
 
     ### test / eval / train
     if (args.test):

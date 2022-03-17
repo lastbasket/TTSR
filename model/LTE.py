@@ -3,12 +3,14 @@ import torch.nn as nn
 import torch.nn.functional as F
 from torchvision import models
 from utils import MeanShift
+import os
 
 
 class LTE(torch.nn.Module):
     def __init__(self, requires_grad=True, rgb_range=1):
         super(LTE, self).__init__()
         
+        os.environ['TORCH_HOME'] = '/localdata/yhuangdl'
         ### use vgg19 weights to initialize
         vgg_pretrained_features = models.vgg19(pretrained=True).features
 
